@@ -1,3 +1,4 @@
+from os import name
 import urllib.request, json
 from n_article_model import Article
 from n_source_model import Source
@@ -33,4 +34,24 @@ def get_sources():
     
     return source_results
 
+def process_results(source_list):
+    """
+    function that processes news results and transforms them to a list
+    """
+
+    source_results = None
+
+    for source_res in source_list:
+        name = source_res.get('name')
+        description = source_res.get('description')
+        url = source_res.get('url')
+        country = source_res.get('country')
+        category = source_res.get('category')
+        language = source_res.get('language')
+
+        if name:
+            source_objects = Source(name, description, url, category, language, country)
+            source_results.append(source_objects)
+    
+    return source_results
 
