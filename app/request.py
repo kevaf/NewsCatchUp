@@ -54,3 +54,36 @@ def process_results(source_list):
     
     return source_results
 
+def get_article(id):
+    get_article_url= articles_url.format(id,api_key)
+    with urllib.request.urlopen(get_article_url) as url:
+        get_article_url_data=url.read()
+        get_article_url_response=json.loads(get_article_url_data)
+
+        article_source_results= None
+
+        if get_article_url_response['articles']:
+            article_source_lists=get_article_url_response['articles']
+            article_source_results = process_articles_results(article_source_lists)
+
+    return article_source_results
+
+def process_articles_results(news):
+    '''
+    function that processes the json files of articles from the api key
+    '''
+    article_source_results=[]
+    for item in news:
+        author= item.get('author')
+        desc= item.get('desc')
+        time_posted= item.get('time_posted')
+        urlToImage= item.get('urlToImage')
+        url= item.get('url')
+        title= item.get('title')
+        content=item.get('content')
+
+        if url:
+            item_objects = Article(author,desc,time_posted,url,urlToImage,title,content)
+            article_source_results.append(item_objects)
+    
+    return article_source_results

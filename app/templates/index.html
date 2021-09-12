@@ -7,8 +7,9 @@
     {% for source in source %} 
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">{{ source.name }}</h5>
-          <p class="card-text">{{source.description}}</p>
+          <h2 class="card-title">{{ source.name }}</h2>
+          <p class="card-text"><strong>Description:</strong> {{source.description}}</p>
+          <h4>Country: {{ source.country }}</h4>
           <a href="{{source.url}}" class="btn btn-primary">Visit Site</a>
         </div>
       </div>
