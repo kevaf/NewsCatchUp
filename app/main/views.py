@@ -11,5 +11,14 @@ def index():
 
     title = 'Home - Welcome to News Catch Up the number one news website'
     source = get_sources()
+    return render_template ('index.html', title=title, source = source)
+
+@main.route('/sources')
+def sources():
+    '''
+    View root page function that returns the sources page and its data
+    '''
     articles= get_article(id)
-    return render_template ('index.html', title=title, source = source, articles=articles)
+    
+    return render_template ('index.html', articles=articles)
+
