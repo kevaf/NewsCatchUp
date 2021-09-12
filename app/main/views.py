@@ -13,12 +13,12 @@ def index():
     source = get_sources()
     return render_template ('index.html', title=title, source = source)
 
-@main.route('/sources')
-def sources():
+@main.route('/sources/<id>')
+def sources(id):
     '''
     View root page function that returns the sources page and its data
     '''
     articles= get_article(id)
     
-    return render_template ('index.html', articles=articles)
+    return render_template ('articles.html', articles=articles)
 

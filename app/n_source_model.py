@@ -2,7 +2,8 @@ class Source:
     """
     class that instantiates objects of the source class
     """
-    def __init__(self, name, description, url, category, language, country):
+    def __init__(self,id, name, description, url, category, language, country):
+        self.id = id
         self.name = name
         self.description = description
         self.url = url
