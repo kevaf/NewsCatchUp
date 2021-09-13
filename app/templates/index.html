@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block content %}
+<h1 style="text-align: center; color: white;">Available News Sources</h1>
+<hr>
 <div class="container">
     <div class="row">
         {% for source in source %}
@@ -13,6 +15,7 @@
             <div class="card" style="height: 45vh;">
                 <div class="card-body">
                     <h2 class="card-title">{{ source.name }}</h2>
+                    <hr>
                     <h5 class="card-text"><strong>Description:</strong> {{source.description}}</h5>
                     <h4>Country: {{ source.country }}</h4>
                     <a href="/sources/{{source.id}}" class="btn btn-primary">{{source.name}}</a>

@@ -1,0 +1,9 @@
+body{
+    background-color: grey;
+}
+.card{
+    text-align: center;
+  }
+img{
+    border-radius: 10%;
+}
