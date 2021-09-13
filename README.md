@@ -16,11 +16,11 @@ This web app was created by Kevin Kipyegon. If you have any suggestions or impro
 
 ## Installation
 <li>Clone the Repository
-<ul> git clone: https://github.com/kevaf/NewsCatchUp.git <br>
-cd NewsCatchUp <br>
-Open with desired code editor(Recommended VS Code) <br>
-Run: chmod a+x start.sh <br>
-Run: ./start.py
+<ul> - git clone: https://github.com/kevaf/NewsCatchUp.git <br>
+- cd NewsCatchUp <br>
+- Open with desired code editor(Recommended VS Code) <br>
+- Run: chmod a+x start.sh <br>
+- Run: ./start.py
 
 ## ScreenShot.
 ![Home](app/static/assets/home.png)
