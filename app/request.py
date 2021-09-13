@@ -76,8 +76,8 @@ def process_articles_results(news):
     article_source_results=[]
     for item in news:
         author= item.get('author')
-        desc= item.get('desc')
-        time_posted= item.get('time_posted')
+        desc= item.get('description')
+        time_posted= item.get('publishedAt')
         urlToImage= item.get('urlToImage')
         url= item.get('url')
         title= item.get('title')

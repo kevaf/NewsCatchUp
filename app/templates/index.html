@@ -6,15 +6,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         {% for source in source %}
-        <div class="col-md-4">
-
-            <div class="card">
+        <div class="col-md-3">
+            <div class="card" style="height: 45vh;">
                 <div class="card-body">
                     <h2 class="card-title">{{ source.name }}</h2>
-                    <p class="card-text"><strong>Description:</strong> {{source.description}}</p>
+                    <h5 class="card-text"><strong>Description:</strong> {{source.description}}</h5>
                     <h4>Country: {{ source.country }}</h4>
                     <a href="/sources/{{source.id}}" class="btn btn-primary">{{source.name}}</a>
                 </div>
